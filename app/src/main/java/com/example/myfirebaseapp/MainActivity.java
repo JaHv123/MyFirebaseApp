@@ -1,21 +1,31 @@
 package com.example.myfirebaseapp;
 
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.myfirebaseapp.Models.Persona;
 import com.google.firebase.FirebaseApp;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 public class MainActivity extends AppCompatActivity {
+
+    private List<Persona> personaList = new ArrayList<Persona>();
+    ArrayAdapter<Persona> arrayAdapterPersona;
 
     EditText nombrePersona, apellidosPersona,correoPersona,passwordPersona;
     ListView listVPersona;
@@ -36,6 +46,30 @@ public class MainActivity extends AppCompatActivity {
         listVPersona = findViewById(R.id.lv_datosPersona);
 
         inicializarFirebase();
+        listarDatos();
+    }
+
+    private void listarDatos() {
+
+        databaseReference.child("Persona").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                personaList.clear();
+                for (DataSnapshot objSnaptshot : dataSnapshot.getChildren()){
+                    Persona p = objSnaptshot.getValue(Persona.class);
+                    personaList.add(p);
+
+                    arrayAdapterPersona = new ArrayAdapter<Persona>(MainActivity.this,android.R.layout.simple_list_item_1,personaList);
+                    listVPersona.setAdapter(arrayAdapterPersona);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
     }
 
     private void inicializarFirebase() {
