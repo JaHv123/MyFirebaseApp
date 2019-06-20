@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "836085777111",
+    "firebase_url": "https://mi-app-d36ff.firebaseio.com",
+    "project_id": "mi-app-d36ff",
+    "storage_bucket": "mi-app-d36ff.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:836085777111:android:62dd6b8035388a1f",
+        "android_client_info": {
+          "package_name": "com.example.myfirebaseapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "836085777111-82bm1ib23uv02d5d7q55q9sh1pv6kvl4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.myfirebaseapp",
+            "certificate_hash": "c8eec7c6d76950e356fa08570ca0eac4ce7c7e3e"
+          }
+        },
+        {
+          "client_id": "836085777111-6df7kno4jir83kpqmgprvf193kh4oo9r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyFIdkEe2lWiL_dElsGnQjj5vodMgbMDc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "836085777111-6df7kno4jir83kpqmgprvf193kh4oo9r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
