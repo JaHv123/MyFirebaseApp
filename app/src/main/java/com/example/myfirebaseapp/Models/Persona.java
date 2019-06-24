@@ -2,10 +2,11 @@ package com.example.myfirebaseapp.Models;
 
 public class Persona {
 
-    public String Id;
-    public String Nombre;
-    public String Apellidos;
-    public String Correo;
+    private String Id;
+    private String Nombre;
+    private String Apellidos;
+    private String Correo;
+    private String Password;
 
     public Persona() {
     }
@@ -40,6 +41,14 @@ public class Persona {
 
     public void setCorreo(String correo) {
         Correo = correo;
+    }
+
+    public String getPassword() {
+        return Password;
+    }
+
+    public void setPassword(String password) {
+        Password = password;
     }
 
     @Override

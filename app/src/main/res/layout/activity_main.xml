@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
+            android:inputType="textPersonName|textNoSuggestions"
             android:padding="12dp"/>
 
     </android.support.design.widget.TextInputLayout>
@@ -30,7 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
+            android:inputType="textPersonName|textNoSuggestions"
             android:padding="12dp"/>
 
     </android.support.design.widget.TextInputLayout>
@@ -43,7 +43,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
+            android:inputType="textEmailAddress|textNoSuggestions"
             android:padding="12dp"/>
 
     </android.support.design.widget.TextInputLayout>
@@ -56,7 +56,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPassword"
+            android:inputType="textPassword|textNoSuggestions"
             android:padding="12dp"/>
 
     </android.support.design.widget.TextInputLayout>
